@@ -1,0 +1,195 @@
+// =============================================================================
+// DAX Measure Library — Customer Analytics Platform
+// Engine: Microsoft Power BI (Analysis Services Tabular Engine)
+// Standards: Fully Reusable Measures (Zero Redundant Calculated Columns)
+// Reconciled Net Revenue: $31,028,579.95 | Gross Profit: $12,461,250.73
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// FOLDER: 1. Core Financials
+// -----------------------------------------------------------------------------
+
+[Total Gross Revenue] = 
+SUM(FactOrders[gross_revenue])
+
+[Net Revenue] = 
+CALCULATE(
+    SUM(FactOrders[gross_revenue]),
+    FactOrders[order_status] IN { "Completed", "Shipped" }
+)
+
+[Gross Profit] = 
+CALCULATE(
+    SUM(FactOrders[gross_profit]),
+    FactOrders[order_status] IN { "Completed", "Shipped" }
+)
+
+[Gross Margin %] = 
+DIVIDE(
+    [Gross Profit],
+    [Net Revenue],
+    0
+)
+
+[Total Units Sold] = 
+CALCULATE(
+    SUM(FactOrders[quantity]),
+    FactOrders[order_status] IN { "Completed", "Shipped" }
+)
+
+
+// -----------------------------------------------------------------------------
+// FOLDER: 2. Orders & Fulfillment
+// -----------------------------------------------------------------------------
+
+[Total Orders] = 
+COUNTROWS(FactOrders)
+
+[Completed Orders] = 
+CALCULATE(
+    COUNTROWS(FactOrders),
+    FactOrders[order_status] IN { "Completed", "Shipped" }
+)
+
+[Refunded Orders] = 
+CALCULATE(
+    COUNTROWS(FactOrders),
+    FactOrders[order_status] = "Refunded"
+)
+
+[Cancelled Orders] = 
+CALCULATE(
+    COUNTROWS(FactOrders),
+    FactOrders[order_status] = "Cancelled"
+)
+
+[Refund Rate %] = 
+DIVIDE(
+    [Refunded Orders],
+    [Total Orders],
+    0
+)
+
+[Cancellation Rate %] = 
+DIVIDE(
+    [Cancelled Orders],
+    [Total Orders],
+    0
+)
+
+[Refunded Revenue] = 
+CALCULATE(
+    SUM(FactOrders[gross_revenue]),
+    FactOrders[order_status] = "Refunded"
+)
+
+[Cancelled Revenue] = 
+CALCULATE(
+    SUM(FactOrders[gross_revenue]),
+    FactOrders[order_status] = "Cancelled"
+)
+
+
+// -----------------------------------------------------------------------------
+// FOLDER: 3. Customer & LTV Metrics
+// -----------------------------------------------------------------------------
+
+[Total Customers] = 
+COUNTROWS(DimCustomer)
+
+[Active Customers] = 
+CALCULATE(
+    DISTINCTCOUNT(FactOrders[customer_id]),
+    FactOrders[order_status] IN { "Completed", "Shipped" }
+)
+
+[Average Order Value (AOV)] = 
+DIVIDE(
+    [Net Revenue],
+    [Completed Orders],
+    0
+)
+
+[Revenue Per Customer] = 
+DIVIDE(
+    [Net Revenue],
+    [Active Customers],
+    0
+)
+
+[Repeat Buyer Rate %] = 
+DIVIDE(
+    CALCULATE(
+        [Active Customers],
+        DimCustomerAnalytics[completed_orders] >= 2
+    ),
+    [Active Customers],
+    0
+)
+
+
+// -----------------------------------------------------------------------------
+// FOLDER: 4. Time Intelligence
+// -----------------------------------------------------------------------------
+
+[Net Revenue Prior Month] = 
+CALCULATE(
+    [Net Revenue],
+    DATEADD(DimDate[date], -1, MONTH)
+)
+
+[MoM Revenue Growth %] = 
+DIVIDE(
+    [Net Revenue] - [Net Revenue Prior Month],
+    [Net Revenue Prior Month],
+    0
+)
+
+[YoY Revenue Growth %] = 
+VAR RevenuePriorYear = 
+    CALCULATE(
+        [Net Revenue],
+        SAMEPERIODLASTYEAR(DimDate[date])
+    )
+RETURN
+    DIVIDE(
+        [Net Revenue] - RevenuePriorYear,
+        RevenuePriorYear,
+        0
+    )
+
+[Running Net Revenue] = 
+CALCULATE(
+    [Net Revenue],
+    FILTER(
+        ALLSELECTED(DimDate),
+        DimDate[date] <= MAX(DimDate[date])
+    )
+)
+
+
+// -----------------------------------------------------------------------------
+// FOLDER: 5. Customer Risk & Churn Intelligence
+// -----------------------------------------------------------------------------
+
+[High Risk Customers] = 
+CALCULATE(
+    COUNTROWS(DimCustomerAnalytics),
+    DimCustomerAnalytics[risk_level] = "HIGH"
+)
+
+[Critical Risk Customers] = 
+CALCULATE(
+    COUNTROWS(DimCustomerAnalytics),
+    DimCustomerAnalytics[risk_level] = "CRITICAL"
+)
+
+[Historical Revenue at Risk] = 
+// Represents cumulative historical revenue of accounts currently at HIGH or CRITICAL risk (not guaranteed future churn loss)
+CALCULATE(
+    SUM(DimCustomerAnalytics[total_revenue]),
+    DimCustomerAnalytics[risk_level] IN { "HIGH", "CRITICAL" }
+)
+
+[Avg Churn Probability] = 
+AVERAGE(DimCustomerAnalytics[churn_probability])

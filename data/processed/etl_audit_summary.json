@@ -1,0 +1,102 @@
+{
+  "pipeline_run_id": "RUN_F98EF82E",
+  "run_timestamp": "2026-09-08T16:00:14.942167+00:00",
+  "duration_seconds": 0.64,
+  "extraction": {
+    "total_extracted": 117499,
+    "counts": {
+      "customers": 10080,
+      "products": 500,
+      "orders": 106919
+    }
+  },
+  "transformation": {
+    "customers": {
+      "input_rows": 10080,
+      "ages_imputed": 152,
+      "median_imputed_age": 39.0,
+      "unknown_genders": 102
+    },
+    "products": {
+      "input_rows": 500,
+      "missing_categories": 5,
+      "missing_costs": 3,
+      "average_margin_pct": 49.69056338028169
+    },
+    "orders": {
+      "input_rows": 106919,
+      "unknown_payment_methods": 534,
+      "status_distribution": {
+        "Completed": 92060,
+        "Shipped": 6424,
+        "Cancelled": 4223,
+        "Refunded": 4212
+      }
+    }
+  },
+  "validation": {
+    "total_valid": 114187,
+    "total_rejected": 3312,
+    "overall_pass_rate_pct": 97.18,
+    "tables": {
+      "customers": {
+        "total_input": 10080,
+        "valid_count": 10000,
+        "rejected_count": 80,
+        "rejection_reasons": {
+          "DUPLICATE_CUSTOMER_ID": 80
+        },
+        "pass_rate_pct": 99.21
+      },
+      "products": {
+        "total_input": 500,
+        "valid_count": 492,
+        "rejected_count": 8,
+        "rejection_reasons": {
+          "MISSING_PRODUCT_CATEGORY": 5,
+          "MISSING_PRODUCT_COST": 3
+        },
+        "pass_rate_pct": 98.4
+      },
+      "orders": {
+        "total_input": 106919,
+        "valid_count": 103695,
+        "rejected_count": 3224,
+        "rejection_reasons": {
+          "ORPHAN_PRODUCT_FOREIGN_KEY": 2729,
+          "INVALID_QUANTITY_NEGATIVE_RETURN": 330,
+          "INVALID_QUANTITY_ZERO": 165
+        },
+        "pass_rate_pct": 96.98
+      }
+    },
+    "dead_letter_queue_breakdown": {
+      "ORPHAN_PRODUCT_FOREIGN_KEY": 2729,
+      "INVALID_QUANTITY_NEGATIVE_RETURN": 330,
+      "INVALID_QUANTITY_ZERO": 165,
+      "DUPLICATE_CUSTOMER_ID": 80,
+      "MISSING_PRODUCT_CATEGORY": 5,
+      "MISSING_PRODUCT_COST": 3
+    }
+  },
+  "loading": {
+    "file_artifacts": {
+      "customers": "C:\\Users\\MD REHAN HUSSAIN\\Documents\\customer-analytics-platform\\data\\processed\\customers_clean.csv",
+      "products": "C:\\Users\\MD REHAN HUSSAIN\\Documents\\customer-analytics-platform\\data\\processed\\products_clean.csv",
+      "orders": "C:\\Users\\MD REHAN HUSSAIN\\Documents\\customer-analytics-platform\\data\\processed\\orders_clean.csv",
+      "rejected_records": "C:\\Users\\MD REHAN HUSSAIN\\Documents\\customer-analytics-platform\\data\\processed\\rejected_records.csv",
+      "audit_summary": "C:\\Users\\MD REHAN HUSSAIN\\Documents\\customer-analytics-platform\\data\\processed\\etl_audit_summary.json"
+    },
+    "database": {
+      "database_type": "SQLite (Staging)",
+      "loaded_at": "2026-09-08T16:00:16.035685+00:00",
+      "tables_loaded": {
+        "customers": 10000,
+        "products": 492,
+        "orders": 103695,
+        "rejected_records": 3312,
+        "pipeline_audit_log": 1
+      }
+    }
+  }
+}

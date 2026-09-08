@@ -1,0 +1,29 @@
+project:
+  name: "customer-analytics-platform"
+  version: "0.1.0"
+  description: "End-to-end retail business intelligence and customer analytics platform"
+  random_seed: 42
+
+database:
+  host: "localhost"
+  port: 5432
+  name: "customer_analytics"
+  user: "postgres"
+  schema: "public"
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s | %(levelname)-8s | %(name)s | %(message)s"
+  file_logging: true
+  file_name: "app.log"
+
+analytics:
+  rfm:
+    recency_weight: 0.33
+    frequency_weight: 0.33
+    monetary_weight: 0.34
+  segmentation:
+    n_clusters: 4
+  churn_prediction:
+    test_size: 0.2
+    inactivity_days_threshold: 90

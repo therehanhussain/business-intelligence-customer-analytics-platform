@@ -1,0 +1,57 @@
+"""Configuration package exposing settings, paths, and loaders."""
+
+from src.config import paths
+from src.config.paths import (
+    ANALYTICS_DIR,
+    CONFIG_DIR,
+    DASHBOARD_DIR,
+    DATA_DIR,
+    DOCS_DIR,
+    ETL_DIR,
+    LOGS_DIR,
+    MODELING_DIR,
+    NOTEBOOKS_DIR,
+    PROCESSED_DATA_DIR,
+    PROJECT_ROOT,
+    RAW_DATA_DIR,
+    SQL_DIR,
+    SRC_DIR,
+    TESTS_DIR,
+    UTILS_DIR,
+    ensure_directories,
+)
+from src.config.settings import (
+    AnalyticsConfig,
+    AppConfig,
+    DatabaseConfig,
+    LoggingConfig,
+    load_config,
+    settings,
+)
+
+__all__ = [
+    "paths",
+    "PROJECT_ROOT",
+    "SRC_DIR",
+    "CONFIG_DIR",
+    "ETL_DIR",
+    "ANALYTICS_DIR",
+    "MODELING_DIR",
+    "UTILS_DIR",
+    "DATA_DIR",
+    "RAW_DATA_DIR",
+    "PROCESSED_DATA_DIR",
+    "SQL_DIR",
+    "TESTS_DIR",
+    "NOTEBOOKS_DIR",
+    "DASHBOARD_DIR",
+    "DOCS_DIR",
+    "LOGS_DIR",
+    "ensure_directories",
+    "DatabaseConfig",
+    "LoggingConfig",
+    "AnalyticsConfig",
+    "AppConfig",
+    "load_config",
+    "settings",
+]

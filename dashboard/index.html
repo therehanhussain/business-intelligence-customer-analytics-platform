@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Executive BI & Customer Analytics Dashboard — Prototype</title>
+  <style>
+    :root {
+      --primary: #002B49;
+      --primary-light: #0A3D62;
+      --secondary: #00A3AD;
+      --accent-coral: #E05A47;
+      --accent-gold: #D9822B;
+      --success: #0F9960;
+      --bg: #F4F6F9;
+      --card-bg: #FFFFFF;
+      --text-main: #1C2833;
+      --text-muted: #566573;
+      --border: #E2E8F0;
+      --shadow: 0 4px 12px rgba(0, 43, 73, 0.08);
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font);
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.5;
+      padding-bottom: 50px;
+    }
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: #FFFFFF;
+      padding: 20px 32px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .header-title h1 {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+    .header-title p {
+      font-size: 13px;
+      color: #CBD5E0;
+      margin-top: 4px;
+    }
+    .disclaimer-banner {
+      background: #FFFBEB;
+      border-left: 4px solid #F59E0B;
+      color: #92400E;
+      padding: 12px 24px;
+      font-size: 13px;
+      font-weight: 500;
+      margin: 16px 32px 0;
+      border-radius: 4px;
+    }
+    .nav-tabs {
+      display: flex;
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border);
+      padding: 0 32px;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .tab-btn {
+      padding: 14px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-muted);
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      transition: all 0.2s ease;
+    }
+    .tab-btn:hover {
+      color: var(--primary);
+    }
+    .tab-btn.active {
+      color: var(--primary);
+      border-bottom-color: var(--secondary);
+    }
+    .container {
+      max-width: 1440px;
+      margin: 24px auto;
+      padding: 0 32px;
+    }
+    .tab-pane {
+      display: none;
+    }
+    .tab-pane.active {
+      display: block;
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .kpi-card {
+      background: var(--card-bg);
+      border-radius: 8px;
+      padding: 18px 20px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      position: relative;
+    }
+    .kpi-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .kpi-value {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-top: 6px;
+    }
+    .kpi-sub {
+      font-size: 12px;
+      color: var(--success);
+      font-weight: 500;
+      margin-top: 4px;
+    }
+    .kpi-sub.neutral { color: var(--text-muted); }
+    .kpi-sub.alert { color: var(--accent-coral); }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    .grid-equal-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    @media (max-width: 1024px) {
+      .grid-2, .grid-3, .grid-equal-2 { grid-template-columns: 1fr; }
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 8px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .card-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .card-subtitle {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    /* Table Styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      padding: 10px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    th {
+      background-color: #F8FAFC;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+    tr:hover { background-color: #F8FAFC; }
+    .text-right { text-align: right; }
+    .badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .badge-critical { background-color: #FEE2E2; color: #991B1B; }
+    .badge-high { background-color: #FFEDD5; color: #9A3412; }
+    .badge-medium { background-color: #FEF3C7; color: #92400E; }
+    .badge-low { background-color: #D1FAE5; color: #065F46; }
+    .badge-vip { background-color: #E0E7FF; color: #3730A3; }
+    
+    /* Executive Findings Box */
+    .insights-panel {
+      background: #F0F9FF;
+      border-left: 4px solid var(--secondary);
+      border-radius: 4px;
+      padding: 16px 20px;
+      margin-top: 16px;
+    }
+    .insights-panel h4 {
+      font-size: 14px;
+      color: var(--primary);
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+    .insights-list {
+      list-style-type: none;
+      font-size: 13px;
+      color: var(--text-main);
+    }
+    .insights-list li {
+      margin-bottom: 8px;
+      position: relative;
+      padding-left: 18px;
+    }
+    .insights-list li::before {
+      content: "•";
+      color: var(--secondary);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+    /* Simple Bar Visualizations */
+    .bar-container {
+      margin-bottom: 12px;
+    }
+    .bar-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+    .bar-track {
+      background: #E2E8F0;
+      height: 12px;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      background: var(--primary-light);
+      border-radius: 6px;
+      transition: width 0.4s ease;
+    }
+    .bar-fill.secondary { background: var(--secondary); }
+    .bar-fill.coral { background: var(--accent-coral); }
+    .bar-fill.gold { background: var(--accent-gold); }
+
+    /* Filter Controls */
+    .filter-bar {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .filter-select {
+      padding: 8px 14px;
+      font-size: 13px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: white;
+      color: var(--text-main);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <div class="header-title">
+        <h1>Retail Business Intelligence & Customer Analytics Platform</h1>
+        <p>Enterprise Portfolio Solution | ZS Business Technology Solutions Associate</p>
+      </div>
+      <div>
+        <span class="badge badge-low" style="font-size: 13px; padding: 6px 12px;">Validated Live Data (Phases 2-4)</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="disclaimer-banner">
+    <strong>Dashboard Implementation Specification:</strong> Power BI Desktop was unavailable in the development environment; therefore, this HTML interface serves as a functional visual prototype. The accompanying star schema (<code>data/processed/powerbi/</code>), DAX measures (24 formulas), and Power Query scripts provide the full Power BI production specification. All metrics reflect actual verified project outputs.
+  </div>
+
+  <nav class="nav-tabs">
+    <button class="tab-btn active" onclick="switchTab('exec')">1. Executive Overview</button>
+    <button class="tab-btn" onclick="switchTab('cust')">2. Customer Analytics</button>
+    <button class="tab-btn" onclick="switchTab('sales')">3. Sales & Product Analytics</button>
+    <button class="tab-btn" onclick="switchTab('risk')">4. Customer Risk & Retention</button>
+  </nav>
+
+  <main class="container">
+
+    <!-- TAB 1: EXECUTIVE OVERVIEW -->
+    <div id="tab-exec" class="tab-pane active">
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-title">Net Revenue</div>
+          <div class="kpi-value">$31.03M</div>
+          <div class="kpi-sub">Reconciled to Phase 3</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-title">Gross Profit</div>
+          <div class="kpi-value">$12.46M</div>
+          <div class="kpi-sub">40.16% Gross Margin</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-title">Active Customers</div>
+          <div class="kpi-value">8,925</div>
+          <div class="kpi-sub neutral">89.25% Activation Rate</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-title">Total Orders</div>
+          <div class="kpi-value">103,695</div>
+          <div class="kpi-sub neutral">95,526 Completed/Shipped</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-title">Average Order Value</div>
+          <div class="kpi-value">$324.81</div>
+          <div class="kpi-sub neutral">Net Rev / Completed Orders</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-title">Refund Rate</div>
+          <div class="kpi-value">3.94%</div>
+          <div class="kpi-sub alert">$1.33M Refunded Volume</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-title">Cancellation Rate</div>
+          <div class="kpi-value">3.94%</div>
+          <div class="kpi-sub alert">$1.36M Cancelled Volume</div>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Monthly Net Revenue Trend (2022 – 2024)</div>
+              <div class="card-subtitle">Aggregated commercial sales across 30 active months</div>
+            </div>
+            <span class="badge badge-vip">Seasonality Verified</span>
+          </div>
+          <!-- Visual representation of quarterly sales rhythm -->
+          <div style="margin-top: 16px;">
+            <div class="bar-container">
+              <div class="bar-label"><span>Q4 Peak Seasonality (Nov - Dec Average)</span><span>~$1.35M / mo</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width: 90%;"></div></div>
+            </div>
+            <div class="bar-container">
+              <div class="bar-label"><span>Q2/Q3 Mid-Year Run-Rate (Apr - Sep Average)</span><span>~$1.05M / mo</span></div>
+              <div class="bar-track"><div class="bar-fill secondary" style="width: 70%;"></div></div>
+            </div>
+            <div class="bar-container">
+              <div class="bar-label"><span>Q1 Post-Holiday Lull (Jan - Feb Average)</span><span>~$820K / mo</span></div>
+              <div class="bar-track"><div class="bar-fill gold" style="width: 55%;"></div></div>
+            </div>
+          </div>
+          <div class="insights-panel">
+            <h4>Executive Business Findings</h4>
+            <ul class="insights-list">
+              <li><strong>Revenue Concentration:</strong> The top 21.5% of customers (*Champions*) generate <strong>55.39% of total revenue</strong> ($17.19M), highlighting extreme commercial dependence on high-frequency buyers.</li>
+              <li><strong>Category Margin Divergence:</strong> Beauty & Personal Care delivers an industry-leading <strong>74.31% gross margin</strong> ($1.62M profit), whereas high-volume Electronics achieves only <strong>24.01% gross margin</strong> despite contributing 49.0% of net sales ($15.21M).</li>
+              <li><strong>Fulfillment Loss Exposure:</strong> Unfulfilled transactions (Refunds + Cancellations) accounted for <strong>$2.70M in gross revenue leakage</strong> across 8,169 impacted orders.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Revenue by Category</div>
+              <div class="card-subtitle">Net sales contribution</div>
+            </div>
+          </div>
+          <div style="margin-top: 8px;">
+            <div class="bar-container">
+              <div class="bar-label"><span>Electronics (49.0%)</span><span>$15.21M</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width: 49%;"></div></div>
+            </div>
+            <div class="bar-container">
+              <div class="bar-label"><span>Home & Kitchen (16.9%)</span><span>$5.24M</span></div>
+              <div class="bar-track"><div class="bar-fill secondary" style="width: 17%;"></div></div>
+            </div>
+            <div class="bar-container">
+              <div class="bar-label"><span>Sports & Outdoors (15.1%)</span><span>$4.69M</span></div>
+              <div class="bar-track"><div class="bar-fill secondary" style="width: 15%;"></div></div>
+            </div>
+            <div class="bar-container">
+              <div class="bar-label"><span>Apparel & Accessories (10.9%)</span><span>$3.38M</span></div>
+              <div class="bar-track"><div class="bar-fill gold" style="width: 11%;"></div></div>
+            </div>
+            <div class="bar-container">
+              <div class="bar-label"><span>Beauty & Personal Care (7.0%)</span><span>$2.18M</span></div>
+              <div class="bar-track"><div class="bar-fill gold" style="width: 7%;"></div></div>
+            </div>
+            <div class="bar-container">
+              <div class="bar-label"><span>Books & Media (1.1%)</span><span>$332K</span></div>
+              <div class="bar-track"><div class="bar-fill neutral" style="width: 2%;"></div></div>
+            </div>
+          </div>
+
+          <div style="margin-top: 24px;">
+            <div class="card-title" style="font-size: 14px; margin-bottom: 8px;">Fulfillment Status Funnel</div>
+            <table>
+              <tr><th>Status</th><th>Orders</th><th class="text-right">Share</th></tr>
+              <tr><td>Completed</td><td>89,283</td><td class="text-right">86.10%</td></tr>
+              <tr><td>Shipped</td><td>6,243</td><td class="text-right">6.02%</td></tr>
+              <tr><td>Refunded</td><td>4,087</td><td class="text-right">3.94%</td></tr>
+              <tr><td>Cancelled</td><td>4,082</td><td class="text-right">3.94%</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: CUSTOMER ANALYTICS -->
+    <div id="tab-cust" class="tab-pane">
+      <div class="filter-bar">
+        <select class="filter-select"><option>Filter by Segment (All 8 Tiers)</option><option>Champions</option><option>Loyal Customers</option><option>At Risk</option></select>
+        <select class="filter-select"><option>Filter by Risk Level (All)</option><option>LOW</option><option>HIGH</option><option>CRITICAL</option></select>
+        <select class="filter-select"><option>Filter by State (50 States)</option></select>
+      </div>
+
+      <div class="grid-equal-2">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">RFM Customer Segment Distribution</div>
+            <div class="card-subtitle">10,000 Accounts Classified by Recency, Frequency & Monetary Quintiles</div>
+          </div>
+          <table>
+            <thead>
+              <tr><th>Segment</th><th>Customers</th><th>% Base</th><th class="text-right">Net Revenue</th><th class="text-right">% Rev</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Champions</strong></td><td>2,150</td><td>21.50%</td><td class="text-right">$17,187,268.70</td><td class="text-right">55.39%</td></tr>
+              <tr><td><strong>Loyal Customers</strong></td><td>1,654</td><td>16.54%</td><td class="text-right">$6,444,598.27</td><td class="text-right">20.77%</td></tr>
+              <tr><td><strong>At Risk</strong></td><td>1,000</td><td>10.00%</td><td class="text-right">$4,099,567.19</td><td class="text-right">13.21%</td></tr>
+              <tr><td><strong>Promising</strong></td><td>1,441</td><td>14.41%</td><td class="text-right">$1,426,446.27</td><td class="text-right">4.60%</td></tr>
+              <tr><td><strong>Hibernating</strong></td><td>1,976</td><td>19.76%</td><td class="text-right">$705,553.51</td><td class="text-right">2.27%</td></tr>
+              <tr><td><strong>Cannot Lose Them</strong></td><td>110</td><td>1.10%</td><td class="text-right">$587,672.52</td><td class="text-right">1.89%</td></tr>
+              <tr><td><strong>Potential Loyalists</strong></td><td>570</td><td>5.70%</td><td class="text-right">$572,474.59</td><td class="text-right">1.84%</td></tr>
+              <tr><td><strong>New Customers</strong></td><td>24</td><td>0.24%</td><td class="text-right">$4,998.90</td><td class="text-right">0.02%</td></tr>
+              <tr><td><strong>Inactive / Unactivated</strong></td><td>1,075</td><td>10.75%</td><td class="text-right">$0.00</td><td class="text-right">0.00%</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Customer Concentration & Lifecycle Dynamics</div>
+            <div class="card-subtitle">Average orders, recency, and spend by cohort</div>
+          </div>
+          <table>
+            <thead>
+              <tr><th>Segment</th><th>Avg Orders</th><th>Avg Recency</th><th class="text-right">Avg Spend</th><th class="text-right">Avg Profit</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Champions</td><td>23.9</td><td>11.7 days</td><td class="text-right">$7,994.08</td><td class="text-right">$3,184.50</td></tr>
+              <tr><td>Cannot Lose Them</td><td>15.9</td><td>529.9 days</td><td class="text-right">$5,342.48</td><td class="text-right">$2,187.00</td></tr>
+              <tr><td>At Risk</td><td>12.1</td><td>401.2 days</td><td class="text-right">$4,099.57</td><td class="text-right">$1,635.49</td></tr>
+              <tr><td>Loyal Customers</td><td>12.0</td><td>100.5 days</td><td class="text-right">$3,896.37</td><td class="text-right">$1,562.13</td></tr>
+              <tr><td>Potential Loyalists</td><td>4.7</td><td>31.0 days</td><td class="text-right">$1,004.34</td><td class="text-right">$454.79</td></tr>
+              <tr><td>Promising</td><td>3.2</td><td>283.5 days</td><td class="text-right">$989.90</td><td class="text-right">$393.54</td></tr>
+              <tr><td>Hibernating</td><td>1.7</td><td>539.4 days</td><td class="text-right">$357.06</td><td class="text-right">$165.05</td></tr>
+              <tr><td>New Customers</td><td>1.0</td><td>90.1 days</td><td class="text-right">$208.29</td><td class="text-right">$95.12</td></tr>
+            </tbody>
+          </table>
+          <div class="insights-panel" style="margin-top: 16px;">
+            <h4>Revenue Concentration</h4>
+            <p style="font-size: 13px;"><strong>Champions and Loyal Customers represent 38.04% of customers but generate 76.16% of total revenue</strong> ($23.63M). Maintaining retention among these top 3,804 accounts is the primary driver of corporate profitability.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: SALES & PRODUCT ANALYTICS -->
+    <div id="tab-sales" class="tab-pane">
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Category Profitability & Volume Matrix</div>
+            <div class="card-subtitle">Reconciled Category Performance across 492 SKUs</div>
+          </div>
+          <table>
+            <thead>
+              <tr><th>Category</th><th class="text-right">Net Revenue</th><th class="text-right">Gross Profit</th><th class="text-right">Gross Margin %</th><th class="text-right">Orders</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Electronics</strong></td><td class="text-right">$15,208,390.87</td><td class="text-right">$3,651,855.87</td><td class="text-right">24.01%</td><td class="text-right">17,946</td></tr>
+              <tr><td><strong>Home & Kitchen</strong></td><td class="text-right">$5,244,768.06</td><td class="text-right">$2,639,996.87</td><td class="text-right">50.34%</td><td class="text-right">16,513</td></tr>
+              <tr><td><strong>Sports & Outdoors</strong></td><td class="text-right">$4,685,995.06</td><td class="text-right">$2,338,065.32</td><td class="text-right">49.89%</td><td class="text-right">11,797</td></tr>
+              <tr><td><strong>Apparel & Accessories</strong></td><td class="text-right">$3,381,087.25</td><td class="text-right">$2,085,899.24</td><td class="text-right">61.69%</td><td class="text-right">22,930</td></tr>
+              <tr><td><strong>Beauty & Personal Care</strong></td><td class="text-right">$2,175,902.89</td><td class="text-right">$1,616,889.07</td><td class="text-right"><strong>74.31%</strong></td><td class="text-right">26,724</td></tr>
+              <tr><td><strong>Books & Media</strong></td><td class="text-right">$332,435.82</td><td class="text-right">$128,544.36</td><td class="text-right">38.67%</td><td class="text-right">7,785</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Top 5 Commercial Hero SKUs</div>
+            <div class="card-subtitle">Ranked by Total Realized Net Revenue</div>
+          </div>
+          <table>
+            <thead>
+              <tr><th>Product Name</th><th>Category</th><th class="text-right">Net Rev</th><th class="text-right">Margin %</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Ultralight 2-Person Backpacking Tent</strong></td><td>Sports & Outdoors</td><td class="text-right">$1,856,690.55</td><td class="text-right">54.75%</td></tr>
+              <tr><td><strong>Ultra HD 4K Smart Monitor</strong></td><td>Electronics</td><td class="text-right">$1,360,832.50</td><td class="text-right">19.98%</td></tr>
+              <tr><td><strong>Hydrating Hyaluronic Acid Serum</strong></td><td>Beauty</td><td class="text-right">$954,030.00</td><td class="text-right">80.26%</td></tr>
+              <tr><td><strong>Performance Moisture-Wicking Hoodie</strong></td><td>Apparel</td><td class="text-right">$776,016.00</td><td class="text-right">62.40%</td></tr>
+              <tr><td><strong>Smart Home Security Hub - Ed. 2</strong></td><td>Electronics</td><td class="text-right">$708,977.50</td><td class="text-right">22.31%</td></tr>
+            </tbody>
+          </table>
+          <div class="insights-panel" style="margin-top: 16px;">
+            <h4>Return & Cancellation Drag</h4>
+            <p style="font-size: 13px;">Electronics suffers the highest absolute friction with <strong>$659,941 refunded</strong> and <strong>$702,757 cancelled</strong>, representing nearly 50% of all company friction losses.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 4: CUSTOMER RISK & RETENTION -->
+    <div id="tab-risk" class="tab-pane">
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-title">High & Critical Risk Customers</div>
+          <div class="kpi-value">4,274</div>
+          <div class="kpi-sub alert">42.74% of Total Customer Base</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-title">Historical Revenue Exposure — High & Critical Risk</div>
+          <div class="kpi-value">$10.47M</div>
+          <div class="kpi-sub alert">33.73% Historical Spend (Not Guaranteed Churn)</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-title">High-Value Dormant Base (>$3K Spend)</div>
+          <div class="kpi-value">1,110</div>
+          <div class="kpi-sub alert">$4.69M Exposure in At Risk/Cannot Lose</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-title">ML Churn Model ROC-AUC</div>
+          <div class="kpi-value">0.9481</div>
+          <div class="kpi-sub">84.18% Recall | 94.39% Precision</div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom: 24px;">
+        <div class="card-header">
+          <div class="card-title">Customer Segment × Baseline Risk Tier Matrix (Revenue Exposure)</div>
+          <div class="card-subtitle">Cross-tabulation of accounts and exposed spend</div>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>RFM Segment</th>
+              <th class="text-right">LOW Risk (0-24)</th>
+              <th class="text-right">MEDIUM Risk (25-49)</th>
+              <th class="text-right">HIGH Risk (50-74)</th>
+              <th class="text-right">CRITICAL Risk (75-100)</th>
+              <th class="text-right">Total Revenue</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Champions</strong></td>
+              <td class="text-right"><span class="badge badge-low">2,124 ($17.00M)</span></td>
+              <td class="text-right">4 ($28K)</td>
+              <td class="text-right">22 ($163K)</td>
+              <td class="text-right">0 ($0)</td>
+              <td class="text-right"><strong>$17,187,268.70</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Loyal Customers</strong></td>
+              <td class="text-right"><span class="badge badge-low">808 ($2.06M)</span></td>
+              <td class="text-right">34 ($52K)</td>
+              <td class="text-right"><span class="badge badge-high">793 ($4.27M)</span></td>
+              <td class="text-right">19 ($65K)</td>
+              <td class="text-right"><strong>$6,444,598.27</strong></td>
+            </tr>
+            <tr>
+              <td><strong>At Risk</strong></td>
+              <td class="text-right">0 ($0)</td>
+              <td class="text-right">0 ($0)</td>
+              <td class="text-right"><span class="badge badge-high">483 ($2.21M)</span></td>
+              <td class="text-right"><span class="badge badge-critical">517 ($1.89M)</span></td>
+              <td class="text-right"><strong>$4,099,567.19</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Cannot Lose Them</strong></td>
+              <td class="text-right">0 ($0)</td>
+              <td class="text-right">0 ($0)</td>
+              <td class="text-right">0 ($0)</td>
+              <td class="text-right"><span class="badge badge-critical">110 ($588K)</span></td>
+              <td class="text-right"><strong>$587,672.52</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Promising / Potential / Other</strong></td>
+              <td class="text-right">752 ($609K)</td>
+              <td class="text-right">667 ($442K)</td>
+              <td class="text-right">558 ($785K)</td>
+              <td class="text-right">58 ($168K)</td>
+              <td class="text-right"><strong>$2,003,920.86</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Inactive / Unactivated</strong></td>
+              <td class="text-right">0 ($0)</td>
+              <td class="text-right">0 ($0)</td>
+              <td class="text-right">0 ($0)</td>
+              <td class="text-right"><span class="badge badge-critical">1,075 ($0)</span></td>
+              <td class="text-right"><strong>$0.00</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">High-Value At-Risk Customer Interventions (Top Priority Playbooks)</div>
+          <div class="card-subtitle">Real verified customer accounts with high lifetime spend and critical churn probability</div>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Customer ID</th>
+              <th>Customer Name</th>
+              <th>Segment</th>
+              <th>Risk Level</th>
+              <th>Risk Score</th>
+              <th>Churn Prob</th>
+              <th class="text-right">Total Revenue</th>
+              <th class="text-right">Recency</th>
+              <th>Key Risk Driver</th>
+              <th>Prescribed Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>CUST_004291</strong></td>
+              <td>Kathryn Torres</td>
+              <td>Loyal Customers</td>
+              <td><span class="badge badge-high">HIGH</span></td>
+              <td>70</td>
+              <td>99.7%</td>
+              <td class="text-right"><strong>$23,829.50</strong></td>
+              <td class="text-right">231 days</td>
+              <td>High Inactivity (181-365 Days)</td>
+              <td>Automated 15% Reactivation Offer</td>
+            </tr>
+            <tr>
+              <td><strong>CUST_005174</strong></td>
+              <td>Ann Nelson</td>
+              <td>At Risk</td>
+              <td><span class="badge badge-critical">CRITICAL</span></td>
+              <td>85</td>
+              <td>100.0%</td>
+              <td class="text-right"><strong>$22,900.82</strong></td>
+              <td class="text-right">395 days</td>
+              <td>Severe Inactivity (>365 Days)</td>
+              <td>VIP Concierge Win-Back Promo</td>
+            </tr>
+            <tr>
+              <td><strong>CUST_002296</strong></td>
+              <td>Andrea Torres</td>
+              <td>Loyal Customers</td>
+              <td><span class="badge badge-high">HIGH</span></td>
+              <td>60</td>
+              <td>78.2%</td>
+              <td class="text-right"><strong>$22,735.82</strong></td>
+              <td class="text-right">110 days</td>
+              <td>Cooling Cadence (91-180 Days)</td>
+              <td>Automated 15% Reactivation Offer</td>
+            </tr>
+            <tr>
+              <td><strong>CUST_002765</strong></td>
+              <td>Nicole Cox</td>
+              <td>Champions</td>
+              <td><span class="badge badge-high">HIGH</span></td>
+              <td>60</td>
+              <td>76.8%</td>
+              <td class="text-right"><strong>$20,757.21</strong></td>
+              <td class="text-right">95 days</td>
+              <td>Cooling Cadence (91-180 Days)</td>
+              <td>Automated 15% Reactivation Offer</td>
+            </tr>
+            <tr>
+              <td><strong>CUST_008395</strong></td>
+              <td>Cynthia Morgan</td>
+              <td>Loyal Customers</td>
+              <td><span class="badge badge-high">HIGH</span></td>
+              <td>70</td>
+              <td>99.3%</td>
+              <td class="text-right"><strong>$19,681.33</strong></td>
+              <td class="text-right">198 days</td>
+              <td>High Inactivity (181-365 Days)</td>
+              <td>Automated 15% Reactivation Offer</td>
+            </tr>
+            <tr>
+              <td><strong>CUST_009341</strong></td>
+              <td>Virginia King</td>
+              <td>At Risk</td>
+              <td><span class="badge badge-critical">CRITICAL</span></td>
+              <td>85</td>
+              <td>100.0%</td>
+              <td class="text-right"><strong>$18,670.33</strong></td>
+              <td class="text-right">381 days</td>
+              <td>Severe Inactivity (>365 Days)</td>
+              <td>VIP Concierge Win-Back Promo</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+      
+      document.getElementById('tab-' + tabId).classList.add('active');
+      event.currentTarget.classList.add('active');
+    }
+  </script>
+</body>
+</html>

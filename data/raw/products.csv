@@ -1,0 +1,501 @@
+product_id,product_name,category,price,cost
+PROD_0001,Hydrating Hyaluronic Acid Serum,Beauty & Personal Care,73.5,14.51
+PROD_0002,Performance Moisture-Wicking Hoodie,Apparel & Accessories,102.0,38.35
+PROD_0003,Ultralight 2-Person Backpacking Tent,Sports & Outdoors,340.99,154.31
+PROD_0004,Mineral Daily Sunscreen SPF 50,Beauty & Personal Care,53.99,20.22
+PROD_0005,Smart Home Security Camera Hub,Electronics,128.0,103.96
+PROD_0006,The Agile Technology Organization,Books & Media,21.0,13.3
+PROD_0007,Natural Tea Tree Purifying Toner,Beauty & Personal Care,26.5,6.27
+PROD_0008,Botanical Nourishing Night Cream,Beauty & Personal Care,13.99,3.05
+PROD_0009,Active Fitness Smartwatch,,1034.99,826.43
+PROD_0010,Bamboo Cutting Board with Juice Groove,Home & Kitchen,213.99,122.76
+PROD_0011,Tailored Wool Blend Overcoat,Apparel & Accessories,78.5,22.05
+PROD_0012,Principles of Customer Centricity,Books & Media,40.0,25.51
+PROD_0013,Stainless Steel French Press Coffee Maker,Home & Kitchen,240.99,124.03
+PROD_0014,Insulated Hydro Stainless Water Bottle 32oz,Sports & Outdoors,278.5,172.07
+PROD_0015,Organic Pima Cotton Crewneck Tee,Apparel & Accessories,52.0,23.26
+PROD_0016,Performance Moisture-Wicking Hoodie - Edition 2,Apparel & Accessories,45.5,14.23
+PROD_0017,Non-Stick Ceramic Cookware 10-Pc Set,Home & Kitchen,336.0,139.58
+PROD_0018,Ultra HD 4K Smart Monitor,Electronics,1188.5,951.01
+PROD_0019,Reflective LED Running Vest,Sports & Outdoors,202.0,122.01
+PROD_0020,Weighted Cooling Blanket 15-lb,Home & Kitchen,262.99,132.7
+PROD_0021,Hydrating Hyaluronic Acid Serum - Edition 2,Beauty & Personal Care,50.0,18.01
+PROD_0022,Polarized UV400 Wayfarer Sunglasses,Apparel & Accessories,169.99,80.08
+PROD_0023,Behavioral Economics in E-Commerce,Books & Media,19.99,12.03
+PROD_0024,Insulated Hydro Stainless Water Bottle 32oz - Edition 2,Sports & Outdoors,256.99,133.98
+PROD_0025,Sonic Electric Toothbrush with UV Sanitizer,Beauty & Personal Care,18.99,4.07
+PROD_0026,True Wireless Earbuds with ANC,Electronics,781.99,570.16
+PROD_0027,Damascus Steel 8-Inch Chef Knife,Home & Kitchen,235.0,138.0
+PROD_0028,Compact Dual-Band Wi-Fi 6 Router,Electronics,468.0,348.41
+PROD_0029,20000mAh Power Bank Fast Charger,Electronics,435.0,327.31
+PROD_0030,Collagen Peptide Firming Eye Cream,Beauty & Personal Care,75.0,15.94
+PROD_0031,Hydrating Hyaluronic Acid Serum - Edition 3,,53.99,14.62
+PROD_0032,Financial Modeling for Technology Executives,Books & Media,44.0,27.8
+PROD_0033,All-Weather Lightweight Windbreaker,Apparel & Accessories,101.0,46.36
+PROD_0034,Slim-Fit Stretch Denim Jeans,Apparel & Accessories,84.5,25.06
+PROD_0035,Cordless Rechargeable Stick Vacuum,Home & Kitchen,222.99,117.17
+PROD_0036,Precision Bluetooth Optical Mouse,Electronics,266.99,218.0
+PROD_0037,Smart Home Security Camera Hub - Edition 2,Electronics,1116.5,867.46
+PROD_0038,Cast Iron Pre-Seasoned Dutch Oven,Home & Kitchen,212.99,127.45
+PROD_0039,Tailored Wool Blend Overcoat - Edition 2,Apparel & Accessories,64.99,22.96
+PROD_0040,Collagen Peptide Firming Eye Cream - Edition 2,Beauty & Personal Care,93.5,24.64
+PROD_0041,Fleece-Lined Winter Beanie,Apparel & Accessories,97.0,29.04
+PROD_0042,Non-Slip High-Density Yoga Mat,Sports & Outdoors,309.0,132.05
+PROD_0043,Organic Argan Oil Hair Repair Mask,Beauty & Personal Care,76.99,28.86
+PROD_0044,Performance Moisture-Wicking Hoodie - Edition 3,Apparel & Accessories,140.0,54.88
+PROD_0045,Heavy-Duty Resistance Bands Set,Sports & Outdoors,243.0,103.53
+PROD_0046,Trail-Ready Waterproof Hiking Poles,Sports & Outdoors,413.5,232.53
+PROD_0047,All-Weather Lightweight Windbreaker - Edition 2,Apparel & Accessories,140.0,57.5
+PROD_0048,Slim-Fit Stretch Denim Jeans - Edition 2,Apparel & Accessories,38.5,18.16
+PROD_0049,Beard Conditioning Oil & Comb Kit,Beauty & Personal Care,76.0,13.92
+PROD_0050,Ultra HD 4K Smart Monitor - Edition 2,Electronics,582.99,398.24
+PROD_0051,Ergonomic Mechanical Keyboard,Electronics,520.99,421.03
+PROD_0052,Precision Bluetooth Optical Mouse - Edition 2,Electronics,686.0,485.49
+PROD_0053,Organic Argan Oil Hair Repair Mask - Edition 2,Beauty & Personal Care,88.99,34.87
+PROD_0054,Mineral Daily Sunscreen SPF 50 - Edition 2,Beauty & Personal Care,42.0,16.35
+PROD_0055,Sonic Electric Toothbrush with UV Sanitizer - Edition 2,Beauty & Personal Care,21.0,5.1
+PROD_0056,Gentle Exfoliating AHA/BHA Cleanser,Beauty & Personal Care,76.5,16.03
+PROD_0057,Smart WiFi Meat Thermometer,Home & Kitchen,257.99,152.01
+PROD_0058,Bamboo Cutting Board with Juice Groove - Edition 2,Home & Kitchen,96.0,44.47
+PROD_0059,1080p Streaming Webcam with Ring Light,Electronics,1036.99,775.62
+PROD_0060,Compact Dual-Band Wi-Fi 6 Router - Edition 2,Electronics,827.99,675.52
+PROD_0061,Hydrating Hyaluronic Acid Serum - Edition 4,Beauty & Personal Care,45.5,11.48
+PROD_0062,Cast Iron Pre-Seasoned Dutch Oven - Edition 2,Home & Kitchen,97.0,40.0
+PROD_0063,Damascus Steel 8-Inch Chef Knife - Edition 2,Home & Kitchen,132.0,70.52
+PROD_0064,Mineral Daily Sunscreen SPF 50 - Edition 3,Beauty & Personal Care,60.0,18.76
+PROD_0065,Non-Stick Ceramic Cookware 10-Pc Set - Edition 2,Home & Kitchen,109.5,61.18
+PROD_0066,Memory Foam Orthopedic Contour Pillow,Home & Kitchen,48.0,25.19
+PROD_0067,Digital Touchscreen Air Fryer XL,Home & Kitchen,250.99,95.45
+PROD_0068,Quick-Dry Stretch Boardshorts,Apparel & Accessories,67.0,26.69
+PROD_0069,Smart Home Security Camera Hub - Edition 3,Electronics,203.99,138.78
+PROD_0070,Italian Leather Dress Belt,Apparel & Accessories,135.5,48.91
+PROD_0071,Organic Pima Cotton Crewneck Tee - Edition 2,Apparel & Accessories,83.99,31.97
+PROD_0072,Performance Moisture-Wicking Hoodie - Edition 4,Apparel & Accessories,40.0,16.28
+PROD_0073,Ultralight 2-Person Backpacking Tent - Edition 2,Sports & Outdoors,51.99,32.05
+PROD_0074,Merino Wool Blend Thermal Sweater,Apparel & Accessories,93.99,33.19
+PROD_0075,1080p Streaming Webcam with Ring Light - Edition 2,Electronics,441.99,303.08
+PROD_0076,Slim-Fit Stretch Denim Jeans - Edition 3,Apparel & Accessories,143.99,53.54
+PROD_0077,Waterproof Commuter Backpack,Apparel & Accessories,65.99,28.57
+PROD_0078,Botanical Nourishing Night Cream - Edition 2,Beauty & Personal Care,39.0,7.8
+PROD_0079,Digital Touchscreen Air Fryer XL - Edition 2,Home & Kitchen,190.0,89.31
+PROD_0080,Collagen Peptide Firming Eye Cream - Edition 3,Beauty & Personal Care,66.5,22.22
+PROD_0081,Hydrating Hyaluronic Acid Serum - Edition 5,Beauty & Personal Care,32.99,12.07
+PROD_0082,Quick-Dry Stretch Boardshorts - Edition 2,Apparel & Accessories,164.99,69.85
+PROD_0083,Ultralight 2-Person Backpacking Tent - Edition 3,Sports & Outdoors,246.99,114.41
+PROD_0084,Precision Bluetooth Optical Mouse - Edition 3,Electronics,551.0,415.08
+PROD_0085,Smart Home Security Camera Hub - Edition 4,electronics,1193.5,842.55
+PROD_0086,Portable Waterproof Bluetooth Speaker,Electronics,1087.5,771.84
+PROD_0087,Natural Tea Tree Purifying Toner - Edition 2,Beauty & Personal Care,27.99,10.57
+PROD_0088,Aromatherapy Ultrasonic Essential Oil Diffuser,Home & Kitchen,229.5,89.46
+PROD_0089,Active Fitness Smartwatch - Edition 2,Electronics,637.0,519.14
+PROD_0090,Memory Foam Orthopedic Contour Pillow - Edition 2,Home & Kitchen,327.99,189.36
+PROD_0091,1080p Streaming Webcam with Ring Light - Edition 3,Electronics,92.99,75.4
+PROD_0092,Vitamin C Brightening Facial Moisturizer,Beauty & Personal Care,49.99,14.32
+PROD_0093,Full-Grain Leather Bi-Fold Wallet,Apparel & Accessories,70.99,32.49
+PROD_0094,Breathable Cushioned Running Socks (3-Pack),Apparel & Accessories,82.99,38.83
+PROD_0095,Tailored Wool Blend Overcoat - Edition 3,Apparel & Accessories,134.99,56.64
+PROD_0096,Double-Walled Insulated Glass Tumbler Set,Home & Kitchen,147.99,75.23
+PROD_0097,Fleece-Lined Winter Beanie - Edition 2,Apparel & Accessories,18.99,5.84
+PROD_0098,Ultra HD 4K Smart Monitor - Edition 3,Electronics,46.99,35.19
+PROD_0099,Ergonomic Mechanical Keyboard - Edition 2,Electronics,610.99,464.12
+PROD_0100,Principles of Customer Centricity - Edition 2,Books & Media,41.99,22.33
+PROD_0101,Adjustable Neoprene Dumbbell Set,,127.99,73.15
+PROD_0102,Vitamin C Brightening Facial Moisturizer - Edition 2,Beauty & Personal Care,51.99,12.98
+PROD_0103,All-Weather Lightweight Windbreaker - Edition 3,Apparel & Accessories,56.5,16.61
+PROD_0104,Financial Modeling for Technology Executives - Edition 2,Books & Media,11.99,7.29
+PROD_0105,Sonic Electric Toothbrush with UV Sanitizer - Edition 3,Beauty & Personal Care,71.99,28.05
+PROD_0106,Gentle Exfoliating AHA/BHA Cleanser - Edition 2,Beauty & Personal Care,23.99,4.75
+PROD_0107,Full-Grain Leather Bi-Fold Wallet - Edition 2,Apparel & Accessories,19.0,9.0
+PROD_0108,Breathable Cushioned Running Socks (3-Pack) - Edition 2,Apparel & Accessories,36.99,13.17
+PROD_0109,20000mAh Power Bank Fast Charger - Edition 2,Electronics,324.99,239.64
+PROD_0110,Deep-Tissue Percussion Massage Gun,Sports & Outdoors,360.5,223.17
+PROD_0111,Damascus Steel 8-Inch Chef Knife - Edition 3,Home & Kitchen,293.5,165.59
+PROD_0112,Italian Leather Dress Belt - Edition 2,Apparel & Accessories,147.5,45.56
+PROD_0113,Organic Pima Cotton Crewneck Tee - Edition 3,Apparel & Accessories,60.99,23.73
+PROD_0114,Memory Foam Orthopedic Contour Pillow - Edition 3,Home & Kitchen,213.0,81.66
+PROD_0115,Ergonomic Mechanical Keyboard - Edition 3,Electronics,462.5,358.63
+PROD_0116,Trail-Ready Waterproof Hiking Poles - Edition 2,Sports & Outdoors,340.0,169.95
+PROD_0117,Natural Tea Tree Purifying Toner - Edition 3,Beauty & Personal Care,29.5,9.74
+PROD_0118,Botanical Nourishing Night Cream - Edition 3,Beauty & Personal Care,18.99,7.47
+PROD_0119,Waterproof Commuter Backpack - Edition 2,Apparel & Accessories,75.99,33.96
+PROD_0120,Double-Walled Insulated Glass Tumbler Set - Edition 2,Home & Kitchen,252.99,112.38
+PROD_0121,Stainless Steel French Press Coffee Maker - Edition 2,Home & Kitchen,256.0,103.47
+PROD_0122,Cast Iron Pre-Seasoned Dutch Oven - Edition 3,Home & Kitchen,210.99,120.74
+PROD_0123,1080p Streaming Webcam with Ring Light - Edition 4,Electronics,210.5,167.51
+PROD_0124,Quick-Dry Stretch Boardshorts - Edition 3,Apparel & Accessories,102.5,28.87
+PROD_0125,20000mAh Power Bank Fast Charger - Edition 3,Electronics,49.0,33.37
+PROD_0126,Memory Foam Orthopedic Contour Pillow - Edition 4,Home & Kitchen,207.99,118.99
+PROD_0127,Organic Pima Cotton Crewneck Tee - Edition 4,Apparel & Accessories,167.99,62.62
+PROD_0128,Noise-Isolating Gaming Headset,Electronics,763.0,596.48
+PROD_0129,Pro Wireless Noise-Cancelling Headphones,Electronics,103.99,80.98
+PROD_0130,Bamboo Cutting Board with Juice Groove - Edition 3,Home & Kitchen,233.5,97.14
+PROD_0131,Ergonomic Mechanical Keyboard - Edition 4,electronics,65.99,51.98
+PROD_0132,Principles of Customer Centricity - Edition 3,Books & Media,44.5,28.89
+PROD_0133,Stainless Steel French Press Coffee Maker - Edition 3,Home & Kitchen,216.99,111.28
+PROD_0134,Polarized UV400 Wayfarer Sunglasses - Edition 2,Apparel & Accessories,131.5,44.03
+PROD_0135,Damascus Steel 8-Inch Chef Knife - Edition 4,Home & Kitchen,202.99,77.88
+PROD_0136,MagSafe Fast Charging Station,Electronics,529.0,395.67
+PROD_0137,Data Strategy & Enterprise Architecture Playbook,Books & Media,10.99,6.55
+PROD_0138,Memory Foam Orthopedic Contour Pillow - Edition 5,Home & Kitchen,151.0,87.47
+PROD_0139,Beard Conditioning Oil & Comb Kit - Edition 2,Beauty & Personal Care,85.5,21.36
+PROD_0140,Compact Dual-Band Wi-Fi 6 Router - Edition 3,Electronics,217.99,149.41
+PROD_0141,Smart WiFi Meat Thermometer - Edition 2,Home & Kitchen,78.5,32.27
+PROD_0142,Bamboo Cutting Board with Juice Groove - Edition 4,Home & Kitchen,312.99,173.19
+PROD_0143,Behavioral Economics in E-Commerce - Edition 2,Books & Media,28.0,14.68
+PROD_0144,Double-Walled Insulated Glass Tumbler Set - Edition 3,Home & Kitchen,142.5,69.29
+PROD_0145,Stainless Steel French Press Coffee Maker - Edition 4,Home & Kitchen,257.5,110.15
+PROD_0146,Slim-Fit Stretch Denim Jeans - Edition 4,Apparel & Accessories,113.5,52.11
+PROD_0147,Waterproof Commuter Backpack - Edition 3,Apparel & Accessories,168.5,53.98
+PROD_0148,Aromatherapy Ultrasonic Essential Oil Diffuser - Edition 2,Home & Kitchen,53.0,29.42
+PROD_0149,Full-Grain Leather Bi-Fold Wallet - Edition 3,Apparel & Accessories,142.99,40.63
+PROD_0150,Portable Waterproof Bluetooth Speaker - Edition 2,Electronics,480.99,345.97
+PROD_0151,Adjustable Neoprene Dumbbell Set - Edition 2,Sports & Outdoors,375.5,208.84
+PROD_0152,Non-Slip High-Density Yoga Mat - Edition 2,Sports & Outdoors,265.99,134.01
+PROD_0153,Active Fitness Smartwatch - Edition 3,Electronics,517.99,356.92
+PROD_0154,Bamboo Cutting Board with Juice Groove - Edition 5,Home & Kitchen,170.5,94.92
+PROD_0155,1080p Streaming Webcam with Ring Light - Edition 5,,480.99,385.58
+PROD_0156,Gentle Exfoliating AHA/BHA Cleanser - Edition 3,Beauty & Personal Care,25.99,6.48
+PROD_0157,Classic Fit Chino Pants,Apparel & Accessories,74.99,32.34
+PROD_0158,Botanical Nourishing Night Cream - Edition 4,Beauty & Personal Care,20.0,4.68
+PROD_0159,Beard Conditioning Oil & Comb Kit - Edition 3,Beauty & Personal Care,85.99,30.57
+PROD_0160,Collagen Peptide Firming Eye Cream - Edition 4,Beauty & Personal Care,27.99,7.98
+PROD_0161,Pro Wireless Noise-Cancelling Headphones - Edition 2,Electronics,586.99,477.62
+PROD_0162,Non-Slip High-Density Yoga Mat - Edition 3,Sports & Outdoors,215.99,92.47
+PROD_0163,Full-Grain Leather Bi-Fold Wallet - Edition 4,Apparel & Accessories,126.5,57.92
+PROD_0164,Precision Bluetooth Optical Mouse - Edition 4,Electronics,336.99,262.42
+PROD_0165,Smart WiFi Meat Thermometer - Edition 3,Home & Kitchen,265.99,106.83
+PROD_0166,Quick-Dry Stretch Boardshorts - Edition 4,Apparel & Accessories,182.0,51.6
+PROD_0167,Compact Folding Camping Chair,Sports & Outdoors,401.5,237.87
+PROD_0168,High-Performance Speed Jump Rope,Sports & Outdoors,145.99,74.37
+PROD_0169,Organic Pima Cotton Crewneck Tee - Edition 5,Apparel & Accessories,34.0,12.13
+PROD_0170,Modern Retail Analytics Handbook,Books & Media,31.0,20.68
+PROD_0171,Classic Fit Chino Pants - Edition 2,Apparel & Accessories,60.99,18.88
+PROD_0172,Aromatherapy Ultrasonic Essential Oil Diffuser - Edition 3,Home & Kitchen,207.99,91.16
+PROD_0173,All-Weather Lightweight Windbreaker - Edition 4,Apparel & Accessories,67.0,26.73
+PROD_0174,The Agile Technology Organization - Edition 2,Books & Media,40.99,22.36
+PROD_0175,Smart LED Ambient Light Bar,Electronics,283.5,227.68
+PROD_0176,Noise-Isolating Gaming Headset - Edition 2,Electronics,1080.0,870.42
+PROD_0177,Full-Grain Leather Bi-Fold Wallet - Edition 5,Apparel & Accessories,62.99,
+PROD_0178,Modern Retail Analytics Handbook - Edition 2,Books & Media,26.0,15.86
+PROD_0179,Reflective LED Running Vest - Edition 2,Sports & Outdoors,121.0,54.42
+PROD_0180,Collagen Peptide Firming Eye Cream - Edition 5,Beauty & Personal Care,84.5,27.49
+PROD_0181,Adjustable Neoprene Dumbbell Set - Edition 3,Sports & Outdoors,234.5,133.91
+PROD_0182,Non-Slip High-Density Yoga Mat - Edition 4,Sports & Outdoors,88.99,38.44
+PROD_0183,Damascus Steel 8-Inch Chef Knife - Edition 5,Home & Kitchen,304.99,148.26
+PROD_0184,Performance Moisture-Wicking Hoodie - Edition 5,Apparel & Accessories,99.0,37.03
+PROD_0185,Sonic Electric Toothbrush with UV Sanitizer - Edition 4,Beauty & Personal Care,56.0,20.78
+PROD_0186,Gentle Exfoliating AHA/BHA Cleanser - Edition 4,Beauty & Personal Care,22.99,4.38
+PROD_0187,All-Weather Lightweight Windbreaker - Edition 5,Apparel & Accessories,98.0,43.83
+PROD_0188,Compact Dual-Band Wi-Fi 6 Router - Edition 4,Electronics,685.0,541.78
+PROD_0189,Beard Conditioning Oil & Comb Kit - Edition 4,Beauty & Personal Care,33.0,12.34
+PROD_0190,Polarized UV400 Wayfarer Sunglasses - Edition 3,Apparel & Accessories,171.99,71.5
+PROD_0191,Behavioral Economics in E-Commerce - Edition 3,Books & Media,34.99,21.69
+PROD_0192,Breathable Cushioned Running Socks (3-Pack) - Edition 3,Apparel & Accessories,106.99,47.35
+PROD_0193,Pro Wireless Noise-Cancelling Headphones - Edition 3,Electronics,1186.99,850.09
+PROD_0194,Insulated Hydro Stainless Water Bottle 32oz - Edition 3,Sports & Outdoors,210.0,123.78
+PROD_0195,Ergonomic Mechanical Keyboard - Edition 5,Electronics,1108.5,901.19
+PROD_0196,Precision Bluetooth Optical Mouse - Edition 5,Electronics,440.99,312.56
+PROD_0197,Non-Stick Ceramic Cookware 10-Pc Set - Edition 3,Home & Kitchen,220.99,94.01
+PROD_0198,High-Performance Speed Jump Rope - Edition 2,Sports & Outdoors,108.0,47.01
+PROD_0199,USB-C Multi-Port Hub Adapter,Electronics,550.99,451.63
+PROD_0200,Merino Wool Blend Thermal Sweater - Edition 2,Apparel & Accessories,183.5,77.77
+PROD_0201,Hydrating Hyaluronic Acid Serum - Edition 6,Beauty & Personal Care,17.99,6.69
+PROD_0202,Modern Retail Analytics Handbook - Edition 3,Books & Media,16.99,9.74
+PROD_0203,Cordless Rechargeable Stick Vacuum - Edition 2,Home & Kitchen,146.99,77.87
+PROD_0204,Compact Dual-Band Wi-Fi 6 Router - Edition 5,Electronics,883.0,667.06
+PROD_0205,20000mAh Power Bank Fast Charger - Edition 4,Electronics,807.5,608.7
+PROD_0206,Breathable Cushioned Running Socks (3-Pack) - Edition 4,Apparel & Accessories,176.5,72.62
+PROD_0207,Smart LED Ambient Light Bar - Edition 2,Electronics,249.99,175.38
+PROD_0208,Botanical Nourishing Night Cream - Edition 5,Beauty & Personal Care,15.5,4.67
+PROD_0209,Pro Wireless Noise-Cancelling Headphones - Edition 4,Electronics,1075.5,732.57
+PROD_0210,Memory Foam Orthopedic Contour Pillow - Edition 6,Home & Kitchen,190.5,86.64
+PROD_0211,Hydrating Hyaluronic Acid Serum - Edition 7,Beauty & Personal Care,37.99,12.13
+PROD_0212,Weighted Cooling Blanket 15-lb - Edition 2,Home & Kitchen,256.0,130.9
+PROD_0213,Smart Home Security Camera Hub - Edition 5,Electronics,693.99,519.62
+PROD_0214,Insulated Hydro Stainless Water Bottle 32oz - Edition 4,Sports & Outdoors,383.5,205.61
+PROD_0215,Sonic Electric Toothbrush with UV Sanitizer - Edition 5,Beauty & Personal Care,65.99,20.47
+PROD_0216,Gentle Exfoliating AHA/BHA Cleanser - Edition 5,Beauty & Personal Care,48.99,18.24
+PROD_0217,Active Fitness Smartwatch - Edition 4,Electronics,150.99,109.96
+PROD_0218,True Wireless Earbuds with ANC - Edition 2,Electronics,810.5,662.37
+PROD_0219,Designing Scalable Machine Learning Systems,Books & Media,23.0,12.52
+PROD_0220,Breathable Cushioned Running Socks (3-Pack) - Edition 5,Apparel & Accessories,161.99,69.76
+PROD_0221,Tailored Wool Blend Overcoat - Edition 4,Apparel & Accessories,129.99,55.24
+PROD_0222,Memory Foam Orthopedic Contour Pillow - Edition 7,Home & Kitchen,66.99,36.02
+PROD_0223,Organic Argan Oil Hair Repair Mask - Edition 3,Beauty & Personal Care,68.0,24.17
+PROD_0224,Financial Modeling for Technology Executives - Edition 3,Books & Media,31.0,17.35
+PROD_0225,Organic Pima Cotton Crewneck Tee - Edition 6,Apparel & Accessories,177.5,76.14
+PROD_0226,Modern Retail Analytics Handbook - Edition 4,Books & Media,35.5,22.57
+PROD_0227,Ergonomic Mechanical Keyboard - Edition 6,Electronics,1172.5,848.94
+PROD_0228,Double-Walled Insulated Glass Tumbler Set - Edition 4,Home & Kitchen,29.99,15.35
+PROD_0229,Stainless Steel French Press Coffee Maker - Edition 5,Home & Kitchen,300.0,150.7
+PROD_0230,Portable Waterproof Bluetooth Speaker - Edition 3,Electronics,1126.5,789.05
+PROD_0231,USB-C Multi-Port Hub Adapter - Edition 2,Electronics,417.0,313.34
+PROD_0232,Polarized UV400 Wayfarer Sunglasses - Edition 4,Apparel & Accessories,123.5,51.03
+PROD_0233,Data Strategy & Enterprise Architecture Playbook - Edition 2,Books & Media,19.99,10.3
+PROD_0234,Memory Foam Orthopedic Contour Pillow - Edition 8,Home & Kitchen,290.0,111.59
+PROD_0235,Designing Scalable Machine Learning Systems - Edition 2,Books & Media,39.0,21.35
+PROD_0236,Trail-Ready Waterproof Hiking Poles - Edition 3,Sports & Outdoors,214.0,113.14
+PROD_0237,Smart WiFi Meat Thermometer - Edition 4,Home & Kitchen,98.5,52.83
+PROD_0238,Botanical Nourishing Night Cream - Edition 6,Beauty & Personal Care,33.5,9.08
+PROD_0239,Smart LED Ambient Light Bar - Edition 3,Electronics,518.99,366.28
+PROD_0240,Noise-Isolating Gaming Headset - Edition 3,Electronics,1038.99,827.58
+PROD_0241,Adjustable Neoprene Dumbbell Set - Edition 4,Sports & Outdoors,27.99,12.89
+PROD_0242,Vitamin C Brightening Facial Moisturizer - Edition 3,Beauty & Personal Care,81.99,30.3
+PROD_0243,All-Weather Lightweight Windbreaker - Edition 6,Apparel & Accessories,147.5,59.29
+PROD_0244,Aromatherapy Ultrasonic Essential Oil Diffuser - Edition 4,Home & Kitchen,339.99,189.59
+PROD_0245,Non-Stick Ceramic Cookware 10-Pc Set - Edition 4,Home & Kitchen,70.99,32.92
+PROD_0246,Trail-Ready Waterproof Hiking Poles - Edition 4,Sports & Outdoors,393.99,166.99
+PROD_0247,Digital Touchscreen Air Fryer XL - Edition 3,Home & Kitchen,44.0,18.75
+PROD_0248,Breathable Cushioned Running Socks (3-Pack) - Edition 6,Apparel & Accessories,63.99,19.39
+PROD_0249,Tailored Wool Blend Overcoat - Edition 5,Apparel & Accessories,128.99,40.44
+PROD_0250,Quick-Dry Stretch Boardshorts - Edition 5,Apparel & Accessories,47.99,18.97
+PROD_0251,Hydrating Hyaluronic Acid Serum - Edition 8,Beauty & Personal Care,57.99,14.44
+PROD_0252,Non-Slip High-Density Yoga Mat - Edition 5,Sports & Outdoors,282.5,119.1
+PROD_0253,Stainless Steel French Press Coffee Maker - Edition 6,Home & Kitchen,339.99,196.87
+PROD_0254,Performance Moisture-Wicking Hoodie - Edition 6,Apparel & Accessories,139.5,39.71
+PROD_0255,Classic Fit Chino Pants - Edition 3,Apparel & Accessories,71.99,28.44
+PROD_0256,Gentle Exfoliating AHA/BHA Cleanser - Edition 6,Beauty & Personal Care,16.99,4.28
+PROD_0257,Compact Folding Camping Chair - Edition 2,Sports & Outdoors,164.99,74.84
+PROD_0258,Ultra HD 4K Smart Monitor - Edition 4,Electronics,993.0,756.34
+PROD_0259,Ergonomic Mechanical Keyboard - Edition 7,Electronics,416.99,295.15
+PROD_0260,Weighted Cooling Blanket 15-lb - Edition 3,Home & Kitchen,178.5,72.03
+PROD_0261,Smart Home Security Camera Hub - Edition 6,Electronics,211.5,170.58
+PROD_0262,Non-Slip High-Density Yoga Mat - Edition 6,Sports & Outdoors,85.0,43.62
+PROD_0263,Tailored Wool Blend Overcoat - Edition 6,Apparel & Accessories,29.5,14.16
+PROD_0264,MagSafe Fast Charging Station - Edition 2,Electronics,548.99,390.64
+PROD_0265,Data Strategy & Enterprise Architecture Playbook - Edition 3,Books & Media,11.99,6.42
+PROD_0266,True Wireless Earbuds with ANC - Edition 3,Electronics,239.5,191.47
+PROD_0267,Organic Pima Cotton Crewneck Tee - Edition 7,Apparel & Accessories,161.99,60.29
+PROD_0268,Compact Dual-Band Wi-Fi 6 Router - Edition 6,Electronics,991.0,799.75
+PROD_0269,20000mAh Power Bank Fast Charger - Edition 5,Electronics,500.5,392.37
+PROD_0270,Foldable Drone with 4K HD Camera,Electronics,913.5,684.59
+PROD_0271,Smart LED Ambient Light Bar - Edition 4,Electronics,911.5,700.48
+PROD_0272,Noise-Isolating Gaming Headset - Edition 4,Electronics,298.99,236.45
+PROD_0273,Pro Wireless Noise-Cancelling Headphones - Edition 5,Electronics,912.0,736.86
+PROD_0274,Bamboo Cutting Board with Juice Groove - Edition 6,Home & Kitchen,78.99,44.35
+PROD_0275,Sonic Electric Toothbrush with UV Sanitizer - Edition 6,Beauty & Personal Care,80.99,14.75
+PROD_0276,Breathable Cushioned Running Socks (3-Pack) - Edition 7,Apparel & Accessories,40.99,14.32
+PROD_0277,Tailored Wool Blend Overcoat - Edition 7,Apparel & Accessories,92.0,28.06
+PROD_0278,Cast Iron Pre-Seasoned Dutch Oven - Edition 4,Home & Kitchen,332.99,135.85
+PROD_0279,Reflective LED Running Vest - Edition 3,Sports & Outdoors,100.5,49.12
+PROD_0280,Deep-Tissue Percussion Massage Gun - Edition 2,Sports & Outdoors,139.99,66.22
+PROD_0281,Active Fitness Smartwatch - Edition 5,Electronics,699.5,492.45
+PROD_0282,True Wireless Earbuds with ANC - Edition 4,Electronics,865.5,706.49
+PROD_0283,Classic Fit Chino Pants - Edition 4,Apparel & Accessories,26.0,9.95
+PROD_0284,Merino Wool Blend Thermal Sweater - Edition 3,Apparel & Accessories,61.5,24.37
+PROD_0285,Smart WiFi Meat Thermometer - Edition 5,Home & Kitchen,263.99,125.8
+PROD_0286,Slim-Fit Stretch Denim Jeans - Edition 5,Apparel & Accessories,82.0,34.92
+PROD_0287,Smart LED Ambient Light Bar - Edition 5,Electronics,647.99,480.18
+PROD_0288,Polarized UV400 Wayfarer Sunglasses - Edition 5,Apparel & Accessories,131.99,61.61
+PROD_0289,Stainless Steel French Press Coffee Maker - Edition 7,Home & Kitchen,22.99,9.27
+PROD_0290,Ultra HD 4K Smart Monitor - Edition 5,Electronics,791.99,630.37
+PROD_0291,Adjustable Neoprene Dumbbell Set - Edition 5,Sports & Outdoors,376.99,
+PROD_0292,Precision Bluetooth Optical Mouse - Edition 6,Electronics,1125.99,913.93
+PROD_0293,Advanced SQL for Commercial Insights,Books & Media,18.99,12.55
+PROD_0294,Portable Waterproof Bluetooth Speaker - Edition 4,Electronics,829.5,655.33
+PROD_0295,Heavy-Duty Resistance Bands Set - Edition 2,Sports & Outdoors,64.99,34.8
+PROD_0296,Trail-Ready Waterproof Hiking Poles - Edition 5,Sports & Outdoors,94.99,56.33
+PROD_0297,Data Strategy & Enterprise Architecture Playbook - Edition 4,Books & Media,44.99,28.25
+PROD_0298,High-Performance Speed Jump Rope - Edition 3,Sports & Outdoors,46.99,25.78
+PROD_0299,Beard Conditioning Oil & Comb Kit - Edition 5,Beauty & Personal Care,33.0,11.71
+PROD_0300,Double-Walled Insulated Glass Tumbler Set - Edition 5,Home & Kitchen,304.5,120.42
+PROD_0301,Hydrating Hyaluronic Acid Serum - Edition 9,Beauty & Personal Care,20.0,7.49
+PROD_0302,Foldable Drone with 4K HD Camera - Edition 2,Electronics,760.99,611.02
+PROD_0303,Damascus Steel 8-Inch Chef Knife - Edition 6,Home & Kitchen,293.0,122.96
+PROD_0304,Aromatherapy Ultrasonic Essential Oil Diffuser - Edition 5,Home & Kitchen,189.0,71.96
+PROD_0305,Heavy-Duty Resistance Bands Set - Edition 3,Sports & Outdoors,42.99,23.87
+PROD_0306,Memory Foam Orthopedic Contour Pillow - Edition 9,Home & Kitchen,323.99,153.28
+PROD_0307,Fleece-Lined Winter Beanie - Edition 3,Apparel & Accessories,152.0,43.21
+PROD_0308,Weighted Cooling Blanket 15-lb - Edition 4,Home & Kitchen,180.99,88.94
+PROD_0309,Organic Pima Cotton Crewneck Tee - Edition 8,Apparel & Accessories,180.0,72.09
+PROD_0310,Portable Waterproof Bluetooth Speaker - Edition 5,Electronics,720.99,578.29
+PROD_0311,Cordless Rechargeable Stick Vacuum - Edition 3,Home & Kitchen,124.99,72.15
+PROD_0312,Merino Wool Blend Thermal Sweater - Edition 4,Apparel & Accessories,162.99,59.02
+PROD_0313,All-Weather Lightweight Windbreaker - Edition 7,Apparel & Accessories,77.5,30.51
+PROD_0314,Slim-Fit Stretch Denim Jeans - Edition 6,Apparel & Accessories,123.99,36.53
+PROD_0315,Waterproof Commuter Backpack - Edition 4,Apparel & Accessories,173.5,71.85
+PROD_0316,Polarized UV400 Wayfarer Sunglasses - Edition 6,Apparel & Accessories,93.99,34.44
+PROD_0317,Full-Grain Leather Bi-Fold Wallet - Edition 6,Apparel & Accessories,95.99,35.43
+PROD_0318,Botanical Nourishing Night Cream - Edition 7,Beauty & Personal Care,38.5,12.47
+PROD_0319,Tailored Wool Blend Overcoat - Edition 8,,81.5,36.41
+PROD_0320,Financial Modeling for Technology Executives - Edition 4,Books & Media,38.99,24.26
+PROD_0321,Adjustable Neoprene Dumbbell Set - Edition 6,Sports & Outdoors,109.0,51.11
+PROD_0322,Bamboo Cutting Board with Juice Groove - Edition 7,Home & Kitchen,103.5,43.27
+PROD_0323,Organic Pima Cotton Crewneck Tee - Edition 9,Apparel & Accessories,172.99,59.89
+PROD_0324,Double-Walled Insulated Glass Tumbler Set - Edition 6,Home & Kitchen,38.5,15.09
+PROD_0325,Heavy-Duty Resistance Bands Set - Edition 4,Sports & Outdoors,180.99,91.26
+PROD_0326,Gentle Exfoliating AHA/BHA Cleanser - Edition 7,Beauty & Personal Care,12.0,4.7
+PROD_0327,Compact Folding Camping Chair - Edition 3,Sports & Outdoors,293.0,180.11
+PROD_0328,Aromatherapy Ultrasonic Essential Oil Diffuser - Edition 6,Home & Kitchen,258.5,106.64
+PROD_0329,Non-Stick Ceramic Cookware 10-Pc Set - Edition 5,Home & Kitchen,179.99,107.78
+PROD_0330,Polarized UV400 Wayfarer Sunglasses - Edition 7,Apparel & Accessories,149.99,62.07
+PROD_0331,Hydrating Hyaluronic Acid Serum - Edition 10,Beauty & Personal Care,84.0,23.16
+PROD_0332,Breathable Cushioned Running Socks (3-Pack) - Edition 8,Apparel & Accessories,63.99,28.66
+PROD_0333,Organic Argan Oil Hair Repair Mask - Edition 4,Beauty & Personal Care,76.99,21.71
+PROD_0334,Insulated Hydro Stainless Water Bottle 32oz - Edition 5,Sports & Outdoors,406.99,173.9
+PROD_0335,Smart LED Ambient Light Bar - Edition 6,Electronics,1033.0,761.12
+PROD_0336,Double-Walled Insulated Glass Tumbler Set - Edition 7,Home & Kitchen,301.99,156.32
+PROD_0337,Pro Wireless Noise-Cancelling Headphones - Edition 6,Electronics,161.99,121.91
+PROD_0338,Botanical Nourishing Night Cream - Edition 8,Beauty & Personal Care,58.0,10.67
+PROD_0339,Ergonomic Mechanical Keyboard - Edition 8,electronics,746.0,573.08
+PROD_0340,Principles of Customer Centricity - Edition 4,Books & Media,26.99,18.25
+PROD_0341,Smart Home Security Camera Hub - Edition 7,Electronics,962.99,751.31
+PROD_0342,The Agile Technology Organization - Edition 3,Books & Media,22.0,11.55
+PROD_0343,Ultralight 2-Person Backpacking Tent - Edition 4,Sports & Outdoors,34.0,17.93
+PROD_0344,Weighted Cooling Blanket 15-lb - Edition 5,Home & Kitchen,241.5,136.22
+PROD_0345,Sonic Electric Toothbrush with UV Sanitizer - Edition 7,Beauty & Personal Care,67.99,17.94
+PROD_0346,Gentle Exfoliating AHA/BHA Cleanser - Edition 8,Beauty & Personal Care,15.99,4.77
+PROD_0347,Designing Scalable Machine Learning Systems - Edition 3,Books & Media,30.0,20.16
+PROD_0348,Quick-Dry Stretch Boardshorts - Edition 6,Apparel & Accessories,49.99,20.55
+PROD_0349,Stainless Steel French Press Coffee Maker - Edition 8,Home & Kitchen,52.5,26.82
+PROD_0350,Foldable Drone with 4K HD Camera - Edition 3,Electronics,979.0,669.23
+PROD_0351,Damascus Steel 8-Inch Chef Knife - Edition 7,Home & Kitchen,47.5,19.39
+PROD_0352,Noise-Isolating Gaming Headset - Edition 5,Electronics,777.5,590.85
+PROD_0353,Non-Stick Ceramic Cookware 10-Pc Set - Edition 6,Home & Kitchen,159.99,77.18
+PROD_0354,Memory Foam Orthopedic Contour Pillow - Edition 10,Home & Kitchen,337.99,131.51
+PROD_0355,Digital Touchscreen Air Fryer XL - Edition 4,Home & Kitchen,34.99,18.67
+PROD_0356,Weighted Cooling Blanket 15-lb - Edition 6,Home & Kitchen,309.5,182.63
+PROD_0357,Natural Tea Tree Purifying Toner - Edition 4,Beauty & Personal Care,89.0,33.3
+PROD_0358,Botanical Nourishing Night Cream - Edition 9,Beauty & Personal Care,16.0,3.46
+PROD_0359,Cordless Rechargeable Stick Vacuum - Edition 4,Home & Kitchen,71.5,28.5
+PROD_0360,Double-Walled Insulated Glass Tumbler Set - Edition 8,Home & Kitchen,202.5,103.8
+PROD_0361,Data Strategy & Enterprise Architecture Playbook - Edition 5,Books & Media,27.0,13.67
+PROD_0362,True Wireless Earbuds with ANC - Edition 5,Electronics,403.99,320.56
+PROD_0363,1080p Streaming Webcam with Ring Light - Edition 6,Electronics,375.99,303.35
+PROD_0364,Compact Dual-Band Wi-Fi 6 Router - Edition 7,Electronics,1046.0,754.06
+PROD_0365,Sonic Electric Toothbrush with UV Sanitizer - Edition 8,Beauty & Personal Care,80.99,17.39
+PROD_0366,Performance Moisture-Wicking Hoodie - Edition 7,Apparel & Accessories,175.0,79.56
+PROD_0367,Natural Tea Tree Purifying Toner - Edition 5,Beauty & Personal Care,78.99,22.15
+PROD_0368,Botanical Nourishing Night Cream - Edition 10,Beauty & Personal Care,86.5,16.11
+PROD_0369,All-Weather Lightweight Windbreaker - Edition 8,Apparel & Accessories,135.0,52.48
+PROD_0370,Deep-Tissue Percussion Massage Gun - Edition 3,Sports & Outdoors,177.99,97.48
+PROD_0371,Hydrating Hyaluronic Acid Serum - Edition 11,Beauty & Personal Care,44.99,17.23
+PROD_0372,Polarized UV400 Wayfarer Sunglasses - Edition 8,Apparel & Accessories,148.99,58.22
+PROD_0373,Full-Grain Leather Bi-Fold Wallet - Edition 7,Apparel & Accessories,173.0,81.82
+PROD_0374,Breathable Cushioned Running Socks (3-Pack) - Edition 9,Apparel & Accessories,44.5,19.53
+PROD_0375,USB-C Multi-Port Hub Adapter - Edition 3,Electronics,1171.0,875.67
+PROD_0376,MagSafe Fast Charging Station - Edition 3,Electronics,1126.99,769.95
+PROD_0377,Data Strategy & Enterprise Architecture Playbook - Edition 6,Books & Media,19.5,13.05
+PROD_0378,Italian Leather Dress Belt - Edition 3,Apparel & Accessories,28.99,12.78
+PROD_0379,Organic Pima Cotton Crewneck Tee - Edition 10,Apparel & Accessories,112.99,42.1
+PROD_0380,Collagen Peptide Firming Eye Cream - Edition 6,Beauty & Personal Care,63.0,22.4
+PROD_0381,Smart WiFi Meat Thermometer - Edition 6,Home & Kitchen,276.0,113.13
+PROD_0382,The Agile Technology Organization - Edition 4,Books & Media,47.5,29.94
+PROD_0383,Organic Argan Oil Hair Repair Mask - Edition 5,Beauty & Personal Care,19.99,6.07
+PROD_0384,Double-Walled Insulated Glass Tumbler Set - Edition 9,Home & Kitchen,322.99,166.91
+PROD_0385,Waterproof Commuter Backpack - Edition 5,Apparel & Accessories,146.99,65.18
+PROD_0386,Modern Retail Analytics Handbook - Edition 5,Books & Media,22.5,12.81
+PROD_0387,Natural Tea Tree Purifying Toner - Edition 6,Beauty & Personal Care,67.99,23.78
+PROD_0388,Principles of Customer Centricity - Edition 5,Books & Media,38.99,25.98
+PROD_0389,Smart Home Security Camera Hub - Edition 8,Electronics,1126.0,906.4
+PROD_0390,Deep-Tissue Percussion Massage Gun - Edition 4,Sports & Outdoors,221.99,114.57
+PROD_0391,Digital Touchscreen Air Fryer XL - Edition 5,Home & Kitchen,183.0,69.75
+PROD_0392,MagSafe Fast Charging Station - Edition 4,Electronics,606.99,457.12
+PROD_0393,Smart WiFi Meat Thermometer - Edition 7,Home & Kitchen,156.0,73.25
+PROD_0394,Mineral Daily Sunscreen SPF 50 - Edition 4,Beauty & Personal Care,30.99,8.05
+PROD_0395,1080p Streaming Webcam with Ring Light - Edition 7,Electronics,103.5,78.07
+PROD_0396,Double-Walled Insulated Glass Tumbler Set - Edition 10,Home & Kitchen,307.0,152.08
+PROD_0397,Compact Folding Camping Chair - Edition 4,Sports & Outdoors,48.0,23.54
+PROD_0398,Slim-Fit Stretch Denim Jeans - Edition 7,Apparel & Accessories,148.0,58.37
+PROD_0399,Damascus Steel 8-Inch Chef Knife - Edition 8,Home & Kitchen,224.99,103.76
+PROD_0400,Polarized UV400 Wayfarer Sunglasses - Edition 9,Apparel & Accessories,76.0,26.41
+PROD_0401,Full-Grain Leather Bi-Fold Wallet - Edition 8,Apparel & Accessories,130.0,52.76
+PROD_0402,Non-Slip High-Density Yoga Mat - Edition 7,Sports & Outdoors,192.0,87.85
+PROD_0403,Organic Argan Oil Hair Repair Mask - Edition 6,Beauty & Personal Care,53.99,16.14
+PROD_0404,Precision Bluetooth Optical Mouse - Edition 7,Electronics,293.5,210.05
+PROD_0405,Advanced SQL for Commercial Insights - Edition 2,Books & Media,15.99,9.19
+PROD_0406,Trail-Ready Waterproof Hiking Poles - Edition 6,Sports & Outdoors,320.99,141.58
+PROD_0407,Organic Pima Cotton Crewneck Tee - Edition 11,Apparel & Accessories,63.5,18.34
+PROD_0408,High-Performance Speed Jump Rope - Edition 4,Sports & Outdoors,85.99,49.91
+PROD_0409,Active Fitness Smartwatch - Edition 6,Electronics,381.99,266.02
+PROD_0410,Modern Retail Analytics Handbook - Edition 6,Books & Media,40.5,22.61
+PROD_0411,Hydrating Hyaluronic Acid Serum - Edition 12,Beauty & Personal Care,26.0,7.66
+PROD_0412,Vitamin C Brightening Facial Moisturizer - Edition 4,Beauty & Personal Care,24.99,8.49
+PROD_0413,20000mAh Power Bank Fast Charger - Edition 6,electronics,401.99,298.67
+PROD_0414,Insulated Hydro Stainless Water Bottle 32oz - Edition 6,Sports & Outdoors,303.99,184.22
+PROD_0415,Smart LED Ambient Light Bar - Edition 7,Electronics,600.99,429.88
+PROD_0416,Breathable Cushioned Running Socks (3-Pack) - Edition 10,Apparel & Accessories,154.0,60.11
+PROD_0417,Pro Wireless Noise-Cancelling Headphones - Edition 7,Electronics,992.99,764.09
+PROD_0418,Botanical Nourishing Night Cream - Edition 11,Beauty & Personal Care,26.99,8.02
+PROD_0419,Ergonomic Mechanical Keyboard - Edition 9,Electronics,497.5,355.59
+PROD_0420,Deep-Tissue Percussion Massage Gun - Edition 5,Sports & Outdoors,148.99,84.24
+PROD_0421,Hydrating Hyaluronic Acid Serum - Edition 13,Beauty & Personal Care,22.99,7.66
+PROD_0422,Portable Waterproof Bluetooth Speaker - Edition 6,Electronics,471.99,371.44
+PROD_0423,USB-C Multi-Port Hub Adapter - Edition 4,Electronics,926.99,695.51
+PROD_0424,MagSafe Fast Charging Station - Edition 5,Electronics,787.0,549.79
+PROD_0425,Non-Stick Ceramic Cookware 10-Pc Set - Edition 7,Home & Kitchen,339.99,137.44
+PROD_0426,Trail-Ready Waterproof Hiking Poles - Edition 7,Sports & Outdoors,383.5,177.07
+PROD_0427,Waterproof Commuter Backpack - Edition 6,Apparel & Accessories,94.0,44.82
+PROD_0428,High-Performance Speed Jump Rope - Edition 5,Sports & Outdoors,213.99,111.52
+PROD_0429,20000mAh Power Bank Fast Charger - Edition 7,Electronics,515.99,383.22
+PROD_0430,Deep-Tissue Percussion Massage Gun - Edition 6,Sports & Outdoors,355.5,212.68
+PROD_0431,Behavioral Economics in E-Commerce - Edition 4,Books & Media,18.99,10.07
+PROD_0432,Vitamin C Brightening Facial Moisturizer - Edition 5,Beauty & Personal Care,94.0,19.55
+PROD_0433,Organic Argan Oil Hair Repair Mask - Edition 7,Beauty & Personal Care,85.99,26.8
+PROD_0434,Insulated Hydro Stainless Water Bottle 32oz - Edition 7,Sports & Outdoors,130.99,65.33
+PROD_0435,Ergonomic Mechanical Keyboard - Edition 10,Electronics,1129.99,838.47
+PROD_0436,Performance Moisture-Wicking Hoodie - Edition 8,Apparel & Accessories,67.99,30.33
+PROD_0437,Smart Home Security Camera Hub - Edition 9,Electronics,270.5,185.86
+PROD_0438,Memory Foam Orthopedic Contour Pillow - Edition 11,Home & Kitchen,150.99,62.89
+PROD_0439,Beard Conditioning Oil & Comb Kit - Edition 6,Beauty & Personal Care,68.5,24.76
+PROD_0440,Weighted Cooling Blanket 15-lb - Edition 7,Home & Kitchen,280.99,152.23
+PROD_0441,Adjustable Neoprene Dumbbell Set - Edition 7,Sports & Outdoors,385.0,186.52
+PROD_0442,True Wireless Earbuds with ANC - Edition 6,Electronics,985.99,776.04
+PROD_0443,Organic Argan Oil Hair Repair Mask - Edition 8,Beauty & Personal Care,34.99,11.96
+PROD_0444,Compact Dual-Band Wi-Fi 6 Router - Edition 8,Electronics,541.0,410.86
+PROD_0445,Tailored Wool Blend Overcoat - Edition 9,Apparel & Accessories,60.0,19.54
+PROD_0446,Gentle Exfoliating AHA/BHA Cleanser - Edition 9,Beauty & Personal Care,43.0,9.3
+PROD_0447,Behavioral Economics in E-Commerce - Edition 5,Books & Media,18.5,10.84
+PROD_0448,Aromatherapy Ultrasonic Essential Oil Diffuser - Edition 7,Home & Kitchen,338.99,200.51
+PROD_0449,Pro Wireless Noise-Cancelling Headphones - Edition 8,Electronics,285.0,201.38
+PROD_0450,Memory Foam Orthopedic Contour Pillow - Edition 12,Home & Kitchen,50.5,25.91
+PROD_0451,Ergonomic Mechanical Keyboard - Edition 11,Electronics,907.99,720.55
+PROD_0452,Non-Slip High-Density Yoga Mat - Edition 8,Sports & Outdoors,102.99,55.41
+PROD_0453,Organic Argan Oil Hair Repair Mask - Edition 9,Beauty & Personal Care,51.5,13.32
+PROD_0454,Portable Waterproof Bluetooth Speaker - Edition 7,Electronics,842.0,574.57
+PROD_0455,USB-C Multi-Port Hub Adapter - Edition 5,Electronics,520.5,359.53
+PROD_0456,MagSafe Fast Charging Station - Edition 6,Electronics,328.99,236.16
+PROD_0457,Data Strategy & Enterprise Architecture Playbook - Edition 7,Books & Media,40.0,24.25
+PROD_0458,Cast Iron Pre-Seasoned Dutch Oven - Edition 5,Home & Kitchen,85.99,48.09
+PROD_0459,Beard Conditioning Oil & Comb Kit - Edition 7,Beauty & Personal Care,50.99,11.47
+PROD_0460,Aromatherapy Ultrasonic Essential Oil Diffuser - Edition 8,Home & Kitchen,310.99,131.67
+PROD_0461,Non-Stick Ceramic Cookware 10-Pc Set - Edition 8,Home & Kitchen,106.5,57.93
+PROD_0462,Foldable Drone with 4K HD Camera - Edition 4,Electronics,200.99,138.25
+PROD_0463,Behavioral Economics in E-Commerce - Edition 6,Books & Media,26.0,13.8
+PROD_0464,Performance Moisture-Wicking Hoodie - Edition 9,Apparel & Accessories,84.99,40.2
+PROD_0465,Smart WiFi Meat Thermometer - Edition 8,Home & Kitchen,73.0,31.23
+PROD_0466,Gentle Exfoliating AHA/BHA Cleanser - Edition 10,Beauty & Personal Care,29.5,5.85
+PROD_0467,Cordless Rechargeable Stick Vacuum - Edition 5,Home & Kitchen,292.99,161.12
+PROD_0468,Principles of Customer Centricity - Edition 6,Books & Media,12.0,6.32
+PROD_0469,Smart Home Security Camera Hub - Edition 10,Electronics,398.99,284.72
+PROD_0470,Cast Iron Pre-Seasoned Dutch Oven - Edition 6,Home & Kitchen,62.5,26.76
+PROD_0471,Full-Grain Leather Bi-Fold Wallet - Edition 9,Apparel & Accessories,174.99,68.55
+PROD_0472,Aromatherapy Ultrasonic Essential Oil Diffuser - Edition 9,Home & Kitchen,300.5,145.43
+PROD_0473,Active Fitness Smartwatch - Edition 7,Electronics,905.99,647.86
+PROD_0474,True Wireless Earbuds with ANC - Edition 7,Electronics,377.0,302.92
+PROD_0475,Fleece-Lined Winter Beanie - Edition 4,Apparel & Accessories,57.99,21.97
+PROD_0476,Italian Leather Dress Belt - Edition 4,Apparel & Accessories,115.5,46.31
+PROD_0477,Organic Pima Cotton Crewneck Tee - Edition 12,Apparel & Accessories,149.0,64.17
+PROD_0478,Bamboo Cutting Board with Juice Groove - Edition 8,Home & Kitchen,256.0,115.42
+PROD_0479,Cordless Rechargeable Stick Vacuum - Edition 6,Home & Kitchen,188.0,79.91
+PROD_0480,Merino Wool Blend Thermal Sweater - Edition 5,apparel & accessories,178.99,60.07
+PROD_0481,All-Weather Lightweight Windbreaker - Edition 9,Apparel & Accessories,171.99,70.45
+PROD_0482,Slim-Fit Stretch Denim Jeans - Edition 8,Apparel & Accessories,124.0,47.77
+PROD_0483,Damascus Steel 8-Inch Chef Knife - Edition 9,Home & Kitchen,335.99,171.11
+PROD_0484,Polarized UV400 Wayfarer Sunglasses - Edition 10,Apparel & Accessories,164.99,69.82
+PROD_0485,Smart Home Security Camera Hub - Edition 11,Electronics,954.5,
+PROD_0486,Breathable Cushioned Running Socks (3-Pack) - Edition 11,Apparel & Accessories,165.99,69.67
+PROD_0487,Digital Touchscreen Air Fryer XL - Edition 6,Home & Kitchen,266.99,124.58
+PROD_0488,Quick-Dry Stretch Boardshorts - Edition 7,Apparel & Accessories,127.99,40.2
+PROD_0489,Smart WiFi Meat Thermometer - Edition 9,Home & Kitchen,29.99,13.3
+PROD_0490,Bamboo Cutting Board with Juice Groove - Edition 9,Home & Kitchen,201.99,99.17
+PROD_0491,Hydrating Hyaluronic Acid Serum - Edition 14,Beauty & Personal Care,16.99,3.56
+PROD_0492,Double-Walled Insulated Glass Tumbler Set - Edition 11,Home & Kitchen,31.99,16.4
+PROD_0493,Organic Argan Oil Hair Repair Mask - Edition 10,Beauty & Personal Care,90.0,21.16
+PROD_0494,Merino Wool Blend Thermal Sweater - Edition 6,Apparel & Accessories,61.99,19.01
+PROD_0495,Sonic Electric Toothbrush with UV Sanitizer - Edition 9,Beauty & Personal Care,73.5,25.91
+PROD_0496,Aromatherapy Ultrasonic Essential Oil Diffuser - Edition 10,Home & Kitchen,190.0,81.43
+PROD_0497,Waterproof Commuter Backpack - Edition 7,Apparel & Accessories,59.0,28.0
+PROD_0498,Memory Foam Orthopedic Contour Pillow - Edition 13,Home & Kitchen,326.99,145.12
+PROD_0499,Full-Grain Leather Bi-Fold Wallet - Edition 10,Apparel & Accessories,124.99,46.71
+PROD_0500,Weighted Cooling Blanket 15-lb - Edition 8,Home & Kitchen,173.5,86.94
